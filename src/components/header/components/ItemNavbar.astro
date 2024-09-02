@@ -1,0 +1,16 @@
+---
+interface Props {
+    content?: string;
+    href: string;
+    active?: boolean;
+}
+
+const { content, href, active = false } = Astro.props;
+---
+
+<li class:list={['font-semibold', {'active-nabvar-item': active}]}>
+    <a href={href} class="py-2 block text-sm px-3.5" title={content}>
+        {content}
+        <slot />
+    </a>
+</li>

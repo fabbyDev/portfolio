@@ -1,0 +1,58 @@
+---
+import HomeItemNavbar from './HomeItemNavbar.astro'
+import ItemNavbar from './ItemNavbar.astro'
+
+---
+
+<script>
+    const items = document.querySelectorAll('li');
+    items.forEach(item =>
+        item.addEventListener('click', _ => {
+            items.forEach(item => item.classList.remove('active-navbar-item'))
+            item.classList.add('active-navbar-item')
+        })
+    );
+</script>
+
+<nav class="text-body w-max rounded-full bg-primary-dark overflow-hidden">
+   <ul class="flex justify-center items-center">
+    <HomeItemNavbar
+        href="#"
+        active={true}
+    />
+
+    <ItemNavbar
+        content="Experience"
+        href="/#experience"
+
+    />
+
+    <ItemNavbar
+        content="Projects"
+        href="/#projects"
+    />
+
+    <ItemNavbar
+        content="Contact Me"
+        href="/#contact"
+    />
+   </ul>
+</nav>
+
+<style>
+    nav {
+        animation: nav-animation 1s linear both;
+        animation-timeline: scroll();
+        animation-range: 0 100px;
+    }
+
+    @keyframes nav-animation {
+        0% {
+            background-color: rgb(255 255 255 / 0);
+        }
+        100% {
+            background-color: hsl(0deg 0% 14.65% / 88%);
+            box-shadow: 0px 0px 3px hsl(0deg 0% 30.39%);
+        }
+    }
+</style>
