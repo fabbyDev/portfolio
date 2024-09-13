@@ -5,11 +5,11 @@ import ItemNavbar from './ItemNavbar.astro'
 ---
 
 <script>
-    const items = document.querySelectorAll('li');
+    const items = document.querySelectorAll('.item-navbar');
     items.forEach(item =>
         item.addEventListener('click', _ => {
-            items.forEach(item => item.classList.remove('active-navbar-item'))
-            item.classList.add('active-navbar-item')
+            items.forEach(item => item.classList.remove('active'))
+            item.classList.add('active')
         })
     );
 </script>
@@ -17,7 +17,7 @@ import ItemNavbar from './ItemNavbar.astro'
 <nav class="text-body w-max rounded-full bg-primary-dark overflow-hidden">
    <ul class="flex justify-center items-center">
     <HomeItemNavbar
-        href="#"
+        href="/#"
         active={true}
     />
 
@@ -52,7 +52,7 @@ import ItemNavbar from './ItemNavbar.astro'
         }
         100% {
             background-color: hsl(0deg 0% 14.65% / 88%);
-            box-shadow: 0px 0px 3px hsl(0deg 0% 30.39%);
+            box-shadow: 0px 0px 0px 1px hsl(0, 0%, 38%);
         }
     }
 </style>
