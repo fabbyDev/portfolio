@@ -1,0 +1,33 @@
+---
+import WorkExperience from "./components/WorkExperience.astro";
+
+const work = [
+    {
+        date: '2021 - current',
+        workstation: 'Programmer Analyst',
+        business: 'Simbiosys Software',
+        businessHref: 'https://simbiosysonline.com/',
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
+        technologies: ['Javascript' ,'PHP', 'HTML', 'CSS', 'Esbuild', 'React', 'PostgreSQL', 'TailwindCSS', 'Jquery']
+    },
+    {
+        date: '2020 - 2021',
+        workstation: 'Programmer Analyst',
+        business: 'Ceintec RN',
+        businessHref: 'https://www.facebook.com/ceintecrnperu',
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
+        technologies: ['Javascript' ,'PHP', 'HTML', 'CSS', 'Esbuild', 'React', 'PostgreSQL', 'TailwindCSS', 'Jquery']
+    }
+]
+
+---
+
+<section class="px-8 lg:px-0" id="experience">
+    <div class="flex items-center gap-3 text-white mb-6">
+        <svg class="size-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path><path d="M12 12l0 .01"></path><path d="M3 13a20 20 0 0 0 18 0"></path></svg>
+        <h2 class="font-bold text-3xl">Experience</h2>
+    </div>
+    <ol class="flex flex-col items-center gap-6">
+        {work.map((work) => <WorkExperience experience={work} />)}
+    </ol>
+</section>
