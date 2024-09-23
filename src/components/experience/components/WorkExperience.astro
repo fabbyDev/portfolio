@@ -34,3 +34,33 @@ const { experience } = Astro.props
         <span class="bg-white w-3 h-3 rounded-full absolute top-0 mx-auto circle-experience"></span>
     </div>
 </li>
+
+
+
+<style>
+    .content-experience:hover {
+        box-shadow: 0px 0px 0px 1px var(--text-primary-green);
+        background: hsla(110, 6%, 19%, 0.469);
+        transition: box-shadow .25s;
+    }
+
+    .content-experience > a {
+        display: none;
+    }
+
+    .content-experience:hover > a {
+        display: block;
+    }
+
+    .content-experience:hover + .container-dashed-line-experience > .dashed-line-experience {
+        border-color: var(--text-primary-green);
+        transition: box-shadow .25s;
+
+    }
+
+    .content-experience:hover + .container-dashed-line-experience > .circle-experience {
+        background: var(--text-primary-green);
+        transition: box-shadow .25s;
+
+    }
+</style>
