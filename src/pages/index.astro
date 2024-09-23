@@ -2,13 +2,15 @@
 import Experience from "../components/experience/Experience.astro"
 import Header from "../components/header/Header.astro"
 import Hero from "../components/hero/Hero.astro"
+import Projects from "../components/projects/Projects.astro"
 import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="Portfolio">
 	<Header />
-	<main>
+	<main class="flex flex-col gap-9">
 		<Hero />
 		<Experience />
+		<Projects />
 	</main>
 </Layout>

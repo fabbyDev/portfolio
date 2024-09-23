@@ -46,28 +46,17 @@ p, h1, h2, h3, h4, h5, h6 {
     @apply text-primary-green bg-primary-green/15 font-bold transition-colors duration-200;
 }
 
-.content-experience:hover {
-    box-shadow: 0px 0px 0px 1px var(--text-primary-green);
-    background: hsla(110, 6%, 19%, 0.469);
-    transition: box-shadow .25s;
+.modal {
+    animation: modal-animation 0.2s ease-out;
 }
 
-.content-experience > a {
-    display: none;
-}
-
-.content-experience:hover > a {
-    display: block;
-}
-
-.content-experience:hover + .container-dashed-line-experience > .dashed-line-experience {
-    border-color: var(--text-primary-green);
-    transition: box-shadow .25s;
-
-}
-
-.content-experience:hover + .container-dashed-line-experience > .circle-experience {
-    background: var(--text-primary-green);
-    transition: box-shadow .25s;
-
+@keyframes modal-animation {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
