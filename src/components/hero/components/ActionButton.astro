@@ -2,12 +2,25 @@
 interface Props {
     href: string;
     text: string;
+    download?: string;
 }
 
-const { href, text } = Astro.props;
+const { href, text, download } = Astro.props;
 ---
 <button>
-    <a href={href} class="block text-white p-1.5 rounded-md" style="background: hsl(0, 0%, 75%, 0.17);" title={text} target="_blank">
+    <a href={href} class="block p-1.5 rounded-md text-white font-bold action-button" title={text} target="_blank" download={download}>
         <slot />
     </a>
 </button>
+
+
+<style>
+    .action-button {
+        background-color: hsl(180 1% 82% / 0.20);
+    }
+
+    .action-button:hover {
+        background-color: hsl(180 1% 82% / 0.25);
+    }
+</style>
+

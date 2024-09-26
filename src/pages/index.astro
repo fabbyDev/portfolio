@@ -3,8 +3,14 @@ import Experience from "../components/experience/Experience.astro"
 import Header from "../components/header/Header.astro"
 import Hero from "../components/hero/Hero.astro"
 import Projects from "../components/projects/Projects.astro"
+import ContactMe from "../components/contactMe/ContactMe.astro"
 import Layout from "../layouts/Layout.astro"
 ---
+
+<script>
+	const currentYear = document.getElementById("current-year") as HTMLElement
+	currentYear.textContent = new Date().getFullYear().toString()
+</script>
 
 <Layout title="Portfolio">
 	<Header />
@@ -12,5 +18,14 @@ import Layout from "../layouts/Layout.astro"
 		<Hero />
 		<Experience />
 		<Projects />
+		<ContactMe />
+		<div class=" shadow-blur bg-primary-green/15 shadow-blur-animate-3s h-72 w-72 blur-xl -top-20 -right-24"></div>
+		<div class=" shadow-blur bg-primary-green/15 shadow-blur-animate-6s h-72 w-72 blur-xl top-72 -left-36"></div>
+		<div class=" shadow-blur bg-primary-green/15 shadow-blur-animate-3s h-72 w-72 blur-xl top-[60rem] -right-32"></div>
+
 	</main>
+	<footer class="text-center pb-6 text-gray-100/50 text-xs">
+		© <span id="current-year"></span> Mateo. Casi todos los derechos reservados
+	</footer>
 </Layout>
+

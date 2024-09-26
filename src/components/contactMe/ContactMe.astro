@@ -1,0 +1,42 @@
+---
+import imgContactMe from "../../assets/chat.png";
+import ActionButton from "../hero/components/ActionButton.astro";
+---
+
+<section id="contact" class="flex flex-col items-center justify-center gap-7 text-white min-h-[400px] lg:min-h-[600px] px-8 relative">
+    <div class="flex flex-col items-center justify-center  gap-2">
+        <img src={imgContactMe.src} alt="Contact me" class="w-36 lg:w-40">
+        <h2 class="text-4xl font-bold">Let's work together!</h2>
+        <p class="text-center leading-6">Want to create something awesome? Or, you have any query? Send me an email.</p>
+        <div class="shadow-blur bg-primary-green/10 blur-3xl m-auto h-4/6 bottom-0 left-0 top-0 right-0"></div>
+    </div>
+    <div class="flex items-center justify-center gap-4 flex-wrap">
+        <ActionButton href="mailto:mateofabiancruz@gmail.com" text="Send me an email">
+            <div class="flex items-center gap-2 text-white p-1">
+                <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_294_525)">
+                    <path d="M4.09092 13.436V6.77368L1.93409 4.88343L0 3.83447V12.2603C0 12.9108 0.550195 13.436 1.2273 13.436H4.09092Z" fill="#4285F4"/>
+                    <path d="M13.9091 13.4359H16.7727C17.4518 13.4359 18 12.9088 18 12.2602V3.83447L15.8093 5.03593L13.9091 6.77362V13.4359Z" fill="#34A853"/>
+                    <path d="M4.09092 6.77361L3.79744 4.17044L4.09092 1.67896L9 5.20606L13.9091 1.67896L14.2374 4.03593L13.9091 6.77361L9 10.3007L4.09092 6.77361Z" fill="#EA4335"/>
+                    <path d="M13.9091 1.67901V6.77366L18 3.83445V2.26683C18 0.812922 16.2675 -0.0159121 15.0546 0.856031L13.9091 1.67901Z" fill="#FBBC04"/>
+                    <path d="M0 3.83448L1.88149 5.18634L4.09092 6.77369V1.67904L2.94539 0.856062C1.73039 -0.0159484 0 0.812953 0 2.2668V3.83448Z" fill="#C5221F"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_294_525">
+                    <rect width="18" height="13" fill="white" transform="translate(0 0.5)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                mateofabiancruz@gmail.com
+            </div>
+        </ActionButton>
+
+        <ActionButton href="/public/cv-mateo-cruz.pdf" text="CV" download={'cv-mateo-cruz'}>
+            <div class="flex items-center justify-center gap-2 px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 24 24" class="w-8" fill="currentColor"><path d="M8 6.641l1.121-1.12a1 1 0 0 1 1.415 1.413L7.707 9.763a.997.997 0 0 1-1.414 0L3.464 6.934A1 1 0 1 1 4.88 5.52L6 6.641V1a1 1 0 1 1 2 0v5.641zM1 12h12a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2z"></path></svg>
+                Download CV
+            </div>
+        </ActionButton>
+    </div>
+</section>
+
