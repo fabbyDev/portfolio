@@ -3,7 +3,12 @@ import imgContactMe from "../../assets/chat.png";
 import ActionButton from "../hero/components/ActionButton.astro";
 ---
 
-<section id="contact" class="flex flex-col items-center justify-center gap-7 text-white min-h-[400px] lg:min-h-[600px] px-8 relative">
+<section
+    class="flex flex-col items-center justify-center gap-7 text-white min-h-[400px] lg:min-h-[600px] px-8 relative"
+    id="contact"
+    data-aos="fade-up"
+    data-aos-delay="200"
+>
     <div class="flex flex-col items-center justify-center  gap-2">
         <img src={imgContactMe.src} alt="Contact me" class="w-36 lg:w-40">
         <h2 class="text-4xl font-bold">Let's work together!</h2>

@@ -3,10 +3,11 @@ import Chips from "../../chips.astro";
 import type { Project } from "../../../models/Project";
 
 interface Props {
-    project: Project
+    project: Project,
+    index: number
 }
 
-const { project } = Astro.props
+const { project, index } = Astro.props
 ---
 
 <script>
@@ -25,7 +26,12 @@ const { project } = Astro.props
     );
 </script>
 
-<article class="flex flex-col gap-4 rounded-xl p-5 relative bg-body/5 cursor-pointer project-card" style="max-width: 450px;">
+<article
+    class="flex flex-col gap-4 rounded-xl p-5 relative bg-body/5 cursor-pointer project-card"
+    data-aos="fade-up"
+    data-aos-delay={(index * 100) + 40}
+    style="max-width: 450px;"
+>
     <div class="flex items-center justify-between">
         <h4 project-title={project.title} class="title text-white font-bold text-2xl lg:text-xl">{project.title}</h4>
         <a href="" class="go-to-project absolute top-5 right-5 text-white" target="_blank">

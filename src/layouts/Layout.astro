@@ -15,6 +15,7 @@ const { title } = Astro.props;
 		<meta name="google" content="notranslate" />
 		<meta name="description" content="Portfolio of Mateo Cruz" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="theme-color" content="#1a1e1c">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -23,6 +24,13 @@ const { title } = Astro.props;
 	<body class="overflow-x-hidden">
 		<div class="container mx-auto">
 			<slot />
+		</div>
+		<div class="fixed inset-0 -z-10" style="opacity: 1;">
+			<div
+				class="absolute inset-0"
+				style="background-image: url(&quot;data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='30' height='30' fill='none' stroke-width='2' stroke='rgb(255 255 255 / 4%)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e&quot;);"
+			>
+			</div>
 		</div>
 	</body>
 </html>

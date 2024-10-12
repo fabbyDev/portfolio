@@ -5,6 +5,7 @@ import Hero from "../components/hero/Hero.astro"
 import Projects from "../components/projects/Projects.astro"
 import ContactMe from "../components/contactMe/ContactMe.astro"
 import Layout from "../layouts/Layout.astro"
+import "aos/dist/aos.css"
 ---
 
 <script>
@@ -19,13 +20,18 @@ import Layout from "../layouts/Layout.astro"
 		<Experience />
 		<Projects />
 		<ContactMe />
-		<div class=" shadow-blur bg-primary-green/15 shadow-blur-animate-3s h-72 w-72 blur-xl -top-20 -right-24"></div>
-		<div class=" shadow-blur bg-primary-green/15 shadow-blur-animate-6s h-72 w-72 blur-xl top-72 -left-36"></div>
-		<div class=" shadow-blur bg-primary-green/15 shadow-blur-animate-3s h-72 w-72 blur-xl top-[60rem] -right-32"></div>
-
+		<div class="shadow-blur bg-primary-green/20 shadow-blur-animate-3s h-72 w-72 blur-xl -top-20 -right-24"></div>
+		<div class="shadow-blur bg-primary-green/20 shadow-blur-animate-6s h-72 w-72 blur-xl top-72 -left-36"></div>
+		<div class="shadow-blur bg-primary-green/20 shadow-blur-animate-3s h-72 w-72 blur-xl top-[60rem] -right-32"></div>
 	</main>
 	<footer class="text-center pb-6 text-gray-100/50 text-xs">
 		© <span id="current-year"></span> Mateo. Casi todos los derechos reservados
 	</footer>
 </Layout>
 
+<script>
+	import AOS from "aos";
+	AOS.init({
+		once: true
+	});
+  </script>

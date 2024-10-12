@@ -9,7 +9,10 @@ interface Props {
 const { experience } = Astro.props
 ---
 
-<li class="flex gap-4 lg:max-w-[570px] flex-row-reverse">
+<li
+    class="flex gap-4 lg:max-w-[570px] flex-row-reverse"
+    data-aos="zoom-in"
+>
     <div class="relative py-3 px-4 flex flex-col gap-5 rounded-md hover:shadow-primary-green content-experience">
         <div class="flex flex-col gap-2">
             <p class="text-body/75 font-medium text-sm">{experience.date}</p>

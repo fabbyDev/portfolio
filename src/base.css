@@ -46,6 +46,30 @@ p, h1, h2, h3, h4, h5, h6 {
     @apply text-primary-green bg-primary-green/15 font-bold transition-colors duration-200;
 }
 
+.shadow-blur {
+    @apply rounded-full -z-10 absolute;
+}
+
+.shadow-blur-animate-3s {
+    animation: shadow-blur-bounce 3s infinite;
+}
+
+.shadow-blur-animate-6s {
+    animation: shadow-blur-bounce 6s infinite;
+}
+
+@keyframes shadow-blur-bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .modal {
     animation: modal-animation 0.2s ease-out;
 }
