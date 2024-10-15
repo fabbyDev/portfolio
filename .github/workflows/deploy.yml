@@ -1,9 +1,8 @@
-name: Deploy portfolio
+name: Deploy portfolio in GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ master ]
   workflow_dispatch:
 
 permissions:
