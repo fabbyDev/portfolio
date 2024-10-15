@@ -18,7 +18,7 @@ const { experience } = Astro.props
             <p class="text-body/75 font-medium text-sm">{experience.date}</p>
             <p class="text-primary-green text-3xl font-bold">{experience.workstation}</p>
             <p class="text-white text-2xl font-bold">{experience.business}</p>
-            <p class="text-white text-base">{experience.description}</p>
+            <p class="text-white text-base" set:html={experience.description}></p>
         </div>
 
         <div class="flex flex-wrap gap-2">

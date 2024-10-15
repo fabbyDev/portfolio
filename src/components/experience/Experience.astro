@@ -3,20 +3,20 @@ import WorkExperience from "./components/WorkExperience.astro";
 
 const work = [
     {
-        date: '2021 - current',
-        workstation: 'Programmer Analyst',
+        date: '2021 - actual',
+        workstation: 'Analista Programador',
         business: 'Simbiosys Software',
         businessHref: 'https://simbiosysonline.com/',
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
+        description: 'Estuve involucrado en el desarrollo, mantenibilidad y mejoras de el ERP <a class="text-primary-green" href="https://nube.pe/" target="_blank">Nube.pe</a>. Integré la pasarela de pagos <b>Culqi</b>. Migré <b>Jquery</b> a <b>Vanilla Js</b> en el desarrollo de nuevos módulos. Mejoré la experiencia de usuario y la interfaz dando una experiencia mas fluida y moderna.',
         technologies: ['Javascript' ,'PHP', 'HTML', 'CSS', 'Esbuild', 'React', 'PostgreSQL', 'TailwindCSS', 'Jquery']
     },
     {
         date: '2020 - 2021',
-        workstation: 'Programmer Analyst',
+        workstation: 'Analista Programador',
         business: 'Ceintec RN',
         businessHref: 'https://www.facebook.com/ceintecrnperu',
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
-        technologies: ['Javascript' ,'PHP', 'HTML', 'CSS', 'Esbuild', 'React', 'PostgreSQL', 'TailwindCSS', 'Jquery']
+        description: "Diseñe y Desarrolle junto con el equipo, software para e-commerce, colegios, y otros proyectos. Administre servidores Linux, Cree API's, automtize procesos y integración con otros sistemas. Diseñe e implemente soluciones para mejorar la experiencia de los clientes.",
+        technologies: ['Typescript', 'NodeJs', 'HTML', 'CSS', 'Linux', 'Flutter', 'React','PHP', 'Docker', 'Python', 'MySQL', 'TailwindCSS']
     }
 ]
 
@@ -25,7 +25,7 @@ const work = [
 <section class="px-8 lg:px-0 mb-5" id="experience" data-aos="fade-up" data-aos-duration="4000">
     <div class="flex items-center gap-3 text-white mb-6">
         <svg class="size-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path><path d="M12 12l0 .01"></path><path d="M3 13a20 20 0 0 0 18 0"></path></svg>
-        <h2 class="font-bold text-3xl">Experience</h2>
+        <h2 class="font-bold text-3xl">Experiencia</h2>
     </div>
     <ol class="flex flex-col items-center gap-6">
         {work.map((work) => <WorkExperience experience={work} />)}
