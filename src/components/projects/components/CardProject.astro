@@ -50,7 +50,7 @@ const { project, index } = Astro.props
     </div>
 
     <div class="h-56 md:h-40 w-full overflow-hidden rounded-lg mt-auto">
-        <img class="h-full w-full object-cover object-left-top" src={project.imagePath} alt="" style="height: 300px;">
+        <img class="h-full w-full object-cover object-left-top" src={project.imagePath} alt="" style={project.ignoreDefaultHeight ? '' : 'height: 300px;'}>
     </div>
 </article>
 

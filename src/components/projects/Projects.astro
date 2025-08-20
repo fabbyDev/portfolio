@@ -4,15 +4,47 @@ import imgRestaurant from "../../assets/restaurant.png";
 import imgQuimi from "../../assets/quimi.png";
 import imgAntamina from "../../assets/antamina.png";
 import imgPortfolio from "../../assets/portfolio.png";
+import imgBusquedasPeru from "../../assets/busquedas_peru.png";
+import imgPagoLink from "../../assets/pago_link.png";
+import imgPlaniwebio from "../../assets/planiwebio.png";
+import type { Project } from "../../models/Project";
 
-const projects = [
+const projects : Array<Project> = [
+    {
+        title: 'Búsquedas Perú',
+        business: 'Freelancer',
+        url: 'https://play.google.com/store/apps/details?id=com.etheral.busquedas_peru',
+        description: "Realiza búsquedas por Nombres y Apellidos, DNI y RUC en fuentes públicos. Esta aplicación reúne información pública y te ayuda a realizar consultas desde tu celular, de forma rápida y centralizada.",
+        technologies: ['Flutter', 'Dart', 'Firebase', 'Android', 'Swift', 'Node.js' , 'Typescript', 'Nginx'],
+        imagePath: imgBusquedasPeru.src,
+        ignoreDefaultHeight: true,
+    },
+    {
+        title: 'Planiwebio',
+        business: 'Simbiosys Software y Freelancer',
+        url: 'https://play.google.com/store/apps/details?id=com.nube.planiwebio',
+        description: "Aplicación para administrar Asistencias y RRHH para empresas conectada con nube.pe",
+        technologies: ['Flutter', 'Dart', 'Firebase', 'Android', 'Swift', 'php' , 'python', 'PostgreSQL', 'Inteligencia Artifical'],
+        imagePath: imgPlaniwebio.src,
+        ignoreDefaultHeight: true,
+    },
     {
         title: 'Restaurante',
         business: 'Simbiosys Software',
         url: 'https://nube.pe/',
         description: "Modulo de restaurante para <a class='text-primary-green' href='https://nube.pe/' target='_blank' title='nube.pe'>Nube.pe</a>. Administración de  sedes, creación de pedidos, facturación, Control de precios, administracion de mozos, etc. Todo integrado y conectado con la plataforma de <a class='text-primary-green' href='https://nube.pe/' target='_blank' title='nube.pe'>Nube.pe</a>.",
         technologies: ['Javascript', 'HTML', 'CSS', 'PHP', 'PostgreSQL', 'Esbuild', 'Tailwind CSS'],
-        imagePath: imgRestaurant.src
+        imagePath: imgRestaurant.src,
+        ignoreDefaultHeight: false
+    },
+    {
+        title: 'Pago Link',
+        business: 'Simbiosys Software y Freelancer',
+        url: 'https://misinvitaciones.nube.pe/open-module?module=58d3752274c7d3c96366b2c7e7da14e6&company=d7e67407e85ff3d8713511078dcbe850&owner=a8ecbabae151abacba7dbde04f761c37&cash=b53b3a3d6ab90ce0268229151c9bde11&operation=a5a61717dddc3501cfdf7a4e22d7dbaa&payment=570763d7c089a379c049ee762f87d6e1',
+        description: "Módulo de Pago Link para <a class='text-primary-green' href='https://nube.pe/' target='_blank' title='nube.pe'>Nube.pe</a>. Este módulo esta diseñado para que los usuarios puedan realizar pagos de manera segura y rápida utilizando la pasarelo de pago Culqi.",
+        technologies: ['Javascript', 'HTML', 'CSS', 'PHP', 'PostgreSQL', 'Culqi', 'Esbuild', 'Tailwind CSS'],
+        imagePath: imgPagoLink.src,
+        ignoreDefaultHeight: false
     },
     {
         title: 'Quimi Laboratorio',
@@ -20,7 +52,8 @@ const projects = [
         url: 'http://quimi.gyslaboratorio.com/login',
         description: "Proyecto que gestiona y administra la emisión de comprobantes para los clientes del Laboratorio Quimico G&S. Ademas de visualizar sus productos y su stock.",
         technologies: ['Javascript', 'NodeJS', 'HTML', 'CSS', 'Slim PHP', 'SQL Server', 'Esbuild', 'Tailwind CSS'],
-        imagePath: imgQuimi.src
+        imagePath: imgQuimi.src,
+        ignoreDefaultHeight: false
     },
     {
         title: 'Equipos Detenidos - Antamina',
@@ -28,7 +61,8 @@ const projects = [
         url: "https://www.antamina.com/",
         description: 'Equipos Detenidos es un proyecto que muestra el reporte en tiempo real de vehiculos que se encuentran en mantenimiento y no pueden ser usados, mostrando diferentes opciones de reporte y filtros para ubicar los equipos y su estado de mantenimiento.',
         technologies: ['React JS', 'Node JS', 'C#', 'Sql Server', 'Tailwind Css'],
-        imagePath: imgAntamina.src
+        imagePath: imgAntamina.src,
+        ignoreDefaultHeight: false
     },
     {
         title: 'Portafolio',
@@ -36,7 +70,8 @@ const projects = [
         url: '#',
         description: "Portafolio personal donde muestro mis habilidades, experiencia y proyectos que he realizado durante mi labor como desarrollador de software.",
         technologies: ['Astro JS', 'Node JS', 'CSS', 'HTML', 'Tailwind Css'],
-        imagePath: imgPortfolio.src
+        imagePath: imgPortfolio.src,
+        ignoreDefaultHeight: false
     }
 ]
 

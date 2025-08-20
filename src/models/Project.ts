@@ -5,4 +5,5 @@ export type Project = {
     technologies: Array<string>;
     imagePath: string;
     url: string;
+    ignoreDefaultHeight?: boolean;
 }
